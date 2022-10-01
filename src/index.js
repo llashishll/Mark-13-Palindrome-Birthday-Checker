@@ -186,9 +186,9 @@ function clickHandler(e) {
       var [ctr2, previousDate] = getPreviousPalindromeDate(date);
 
       if (ctr > ctr2) {
-        resultRef.innerText = `The previous palindrome date is ${previousDate.day}-${previousDate.month}-${previousDate.year}, you missed it by ${ctr2} days! 😔${previousDate.da}`;
+        resultRef.innerText = `The previous palindrome date is ${previousDate.day}-${previousDate.month}-${previousDate.year}, you missed it by ${ctr2} days! 😔`;
       } else {
-        resultRef.innerText = `The next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, you missed it by ${ctr} days! 😔${nextDate.month}`;
+        resultRef.innerText = `The next palindrome date is ${nextDate.day}-${nextDate.month}-${nextDate.year}, you missed it by ${ctr} days! 😔`;
       }
     }
   }
