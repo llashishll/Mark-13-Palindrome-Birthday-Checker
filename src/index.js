@@ -1,3 +1,7 @@
+var dateInputRef = document.querySelector("#birthdate");
+var showBtnRef = document.querySelector("#chkBtn");
+var resultRef = document.querySelector("#output");
+
 function checkPalindrome(str) {
   var reverseStr = str.split("").reverse().join("");
   return str === reverseStr;
@@ -190,7 +194,4 @@ function clickHandler(e) {
   }
 }
 
-var dateInputRef = document.querySelector("#birthdate");
-var showBtnRef = document.querySelector("#chkBtn");
-var resultRef = document.querySelector("#output");
 showBtnRef.addEventListener("click", clickHandler);
