@@ -6,8 +6,13 @@ function checkPalindrome(str) {
   var reverseStr = str.split("").reverse().join("");
   return str === reverseStr;
 }
+
 function convertDateToString(date) {
-  var dateString = { day: "", month: "", year: "" };
+  var dateString = {
+    day: "",
+    month: "",
+    year: ""
+  };
 
   if (date.day < 10) {
     dateString.day = "0" + date.day;
@@ -51,6 +56,7 @@ function checkAnyDateFormatIsPalindrome(date) {
 
   return flag;
 }
+
 function checkLeapYear(date) {
   if (date.year % 4 === 0) {
     return true;
@@ -117,6 +123,7 @@ function getNextPalindromeDate(date) {
   }
   return [ctr, nextDate];
 }
+
 function getPreviousDate(date) {
   var day = date.day - 1;
   var month = date.month;
@@ -131,11 +138,12 @@ function getPreviousDate(date) {
       month--;
     }
   } else {
-    if (day === 0 && (month === 1 || 3 || 5 || 7 || 8 || 10 || 12)) {
+    if (day === 0 && (month === 2 || 4 || 6 || 9 || 11)) {
       day = 31;
       month--;
-    } else if (day === 0 && (month === 2 || 4 || 6 || 9 || 11)) {
+    } else if (day === 0 && (month === 1 || 5 || 7 || 8 || 10 || 12)) {
       day = 30;
+
       month--;
     } else if (month === 0) {
       month = 12;
@@ -149,6 +157,7 @@ function getPreviousDate(date) {
     year: year
   };
 }
+
 function getPreviousPalindromeDate(date) {
   var ctr2 = 0;
   var previousDate = getPreviousDate(date);
